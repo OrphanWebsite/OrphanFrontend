@@ -3,17 +3,22 @@
 
     // we going to create a function that builds the card elements
 
-    function createChildCard(image, childName) {
+    function createChildCard(image, childName, age ) {
 
 
         // create Element
     const mainDiv = document.createElement("div")
     const childImage = document.createElement("img")
-    const childFullName = document.createElement("P")
+    const childFullName = document.createElement("h2")
+    const description = document.createElement("p")
+    const buttonNode = document.createElement("button")
 
     // add the data 
     childImage.src = image
     childFullName.textContent = childName
+    description.textContent = "Age:" + age
+    buttonNode.textContent = "Sponsor Now"
+
 
     // add classes
 
@@ -24,7 +29,8 @@
 
     mainDiv.appendChild(childImage)
     mainDiv.appendChild(childFullName)
-
+    mainDiv.appendChild(description)
+    mainDiv.appendChild(buttonNode) 
 
     return mainDiv
 
@@ -40,12 +46,13 @@
     .then(response => {
     response.data.map(child => {
 
-      
+      console.log(response.data)
 
     const name = child.name
     const image = child.image_url 
+    const age = child.age
 
-    entary.appendChild(createChildCard(image,name))
+    entary.appendChild(createChildCard(image,name, age))
 
     })
 
