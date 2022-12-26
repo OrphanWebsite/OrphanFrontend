@@ -16,7 +16,7 @@
     // add the data 
     childImage.src = image
     childFullName.textContent = childName
-    description.textContent = "Age:" + age
+    description.textContent = "Age:" +  age
     buttonNode.textContent = "Sponsor Now"
 
 
@@ -24,8 +24,10 @@
 
     mainDiv.classList.add("child-card")
     childImage.classList.add("child-image")
+    buttonNode.classList.add("button-node")
+    description.classList.add("child-age")
 
-    // append elements  together 
+    // append elements  together
 
     mainDiv.appendChild(childImage)
     mainDiv.appendChild(childFullName)
