@@ -3,7 +3,7 @@
 
     // we going to create a function that builds the card elements
 
-    function createChildCard(image, childName, age ) {
+    function createChildCard(image, childName, age, id) {
 
 
         // create Element
@@ -34,7 +34,20 @@
     mainDiv.appendChild(description)
     mainDiv.appendChild(buttonNode) 
 
+
+    
+    
+    buttonNode.addEventListener('click', (e) =>   {
+
+    window.open(`/child_profile.html?id=${id}`)
+
+    }
+    );
+    
+
+
     return mainDiv
+
 
 
 
@@ -43,18 +56,21 @@
 
     const entary = document.querySelector(".entary")
 
-
+   
     axios.get("https://phpstack-776148-3099296.cloudwaysapps.com/public/api/orphans")
     .then(response => {
     response.data.map(child => {
-
-      console.log(response.data)
+    
 
     const name = child.name
     const image = child.image_url 
     const age = child.age
+    const id =child.id
 
-    entary.appendChild(createChildCard(image,name, age))
+    
+
+    entary.appendChild(createChildCard(image,name, age,id))
+    
 
     })
 
