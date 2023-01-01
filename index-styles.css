@@ -52,12 +52,42 @@ table {
 /* end of reset */
 
 
-
-
-
-
-
-#hero-top {
-	background-image:url("hero-images.jpg");
-  width: 400px;
+.top-hero {
+width: fit-content;
 }
+
+
+.container {
+  
+	display:flex;
+	flex-direction: column-raw;
+	justify-content:space-around;
+	align-items: center;
+	text-align: center;
+	align-items: center;
+	padding-top:15px;
+	
+	
+	
+  }
+  
+   button {
+	
+	background-color:   #0000FF; /* Green */
+	  border: none;
+	  border-radius: 15px;
+	  color: white;
+	  padding: 15px 32px;
+	  text-align: center;
+	  text-decoration: none;
+	  display: inline-block;
+	  font-size: 40px;
+	  margin: 30px;
+	  
+  }
+  
+   p {
+	
+	font-size: 30px;
+	
+  }
