@@ -83,6 +83,7 @@ table {
 	flex-direction: raw;
 	align-items: center;
 	justify-content: center;
+	flex: 1;
 	padding: 1rem;
 	column-gap: 25px;
 	font-size: 20px;
@@ -128,7 +129,7 @@ table {
 	color:rgb(52, 195, 152);
 	font-size: 68px;
 	cursor:pointer;
-	background:#222;
+	background:rgb(34, 34, 34);
 	line-height: 2;
 
 
@@ -161,3 +162,36 @@ table {
 	font-size: 20px;
 
   }
+
+
+  @media (max-width: 580px) {
+
+	.container {
+
+
+		display: flex;
+		flex-direction: column;
+		flex-direction: 1;
+		margin-top: 10px;;
+	}
+
+
+
+	.content .btn {
+
+		display: none;
+	}
+
+
+	.container  .left-side  {
+
+		margin-bottom: 20px;
+		
+	}
+
+
+  }
+
+
+
+  
