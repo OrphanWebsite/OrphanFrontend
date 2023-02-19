@@ -51,3 +51,18 @@ margin-top: 65px;
     margin: 0;
    
      }
+
+
+     
+  @media (max-width: 580px) {
+
+     .about-container {
+  
+  
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      margin-top: 10px;;
+    }
+  
+  }  
